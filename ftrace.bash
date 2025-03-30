@@ -25,14 +25,14 @@ case "$TOGGLE" in
 				;;
 		esac
 		;;
-	"check")
+	"check"|"curr"|"current")
 		cat "$TRACE/current_tracer"
 		;;
 	"list")
 		cat "$TRACE/available_tracers"
 		;;
 	"view")
-		cat "$TRACE/trace ${@:2}" # allows for abritrary args after
+		cat "$TRACE/trace"
 		;;
 	*)
 		echo "usage: $0 on | off | set <func | graph | nop> | check | list | view [args (| head -20)]"
